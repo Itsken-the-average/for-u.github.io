@@ -118,7 +118,7 @@ function checkPassword(event) {
   const music = document.getElementById("bgMusic");
 
   // VALID PASSWORDS HERE
-  if (password === "1234" || password === "JESS102205") {
+  if (password === "3187" || password === "JESS102205") {
     // 1. Hide the login screen
     loginOverlay.classList.add("hidden");
     setTimeout(() => {
@@ -149,4 +149,5 @@ window.onload = () => {
   // Just focus the input
   const input = document.getElementById("passwordInput");
   if (input) input.focus();
+
 };
