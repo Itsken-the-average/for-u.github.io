@@ -59,8 +59,14 @@ body {
   /* Background from CSS */
   background: #3a0010;
   /* Added fallback gradient since image.jpeg might not exist */
-  background: linear-gradient(rgba(80, 0, 20, 0.8), rgba(80, 0, 20, 0.9)),
+
+   /*15 percent*/
+  background: linear-gradient(rgba(60, 0, 15, 0.85), rgba(60, 0, 15, 0.85)),
+  url("image.jpeg");
+   /*OLD
+   background: linear-gradient(rgba(80, 0, 20, 0.8), rgba(80, 0, 20, 0.9)),
     url("image.jpeg");
+   */
   background-position: center;
   background-size: cover;
 
