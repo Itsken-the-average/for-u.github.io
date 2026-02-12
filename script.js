@@ -1,10 +1,9 @@
-// Detect if mobile for performance adjustments
+
 
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
   navigator.userAgent
 );
-
-/* --- Fireworks Logic --- */
+
 function startFireworks() {
   const container = document.querySelector(".fireworks-container");
   const colors = ["#ff1744", "#00e5ff", "#ffea00", "#e040fb", "#76ff03"];
@@ -82,8 +81,7 @@ function createExplosion(x, y, color, container) {
     }, 1500);
   }
 }
-
-/* --- Twinkling Stars Logic --- */
+
 function createStars() {
   const starContainer = document.querySelector(".stars-container");
   if (!starContainer) return;
@@ -109,10 +107,9 @@ function createStars() {
     starContainer.appendChild(star);
   }
 }
-
-/* --- PASSWORD LOGIC --- */
+
 function checkPassword(event) {
-  event.preventDefault(); // Stop form submission
+  event.preventDefault(); submission
 
   const passwordInput = document.getElementById("passwordInput");
   const password = passwordInput.value;
@@ -121,21 +118,19 @@ function checkPassword(event) {
   const music = document.getElementById("bgMusic");
 
   // VALID PASSWORDS HERE
-  if (password === "3187" || password === "JMJ102205") {
-    // 1. Hide the login screen
+  if (password === "3187" || password === "JMJ102205") {
     loginOverlay.classList.add("hidden");
     setTimeout(() => {
       loginOverlay.style.display = "none";
     }, 800);
 
-    // 2. Enable animations
     document.body.classList.remove("not-loaded");
 
-    // 3. Start specific JS animations
+   
     createStars();
     startFireworks();
 
-    // 4. Play Music
+   
     if (music) {
       music.play().catch((e) => console.log("Audio play failed:", e));
     }
@@ -146,8 +141,7 @@ function checkPassword(event) {
     passwordInput.focus();
   }
 }
-
-// Initialize but don't start animations yet
+
 window.onload = () => {
   // Just focus the input
   const input = document.getElementById("passwordInput");
