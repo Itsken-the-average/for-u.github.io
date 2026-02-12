@@ -142,8 +142,7 @@ function checkPassword(event) {
   }
 }
 
-window.onload = () => {
-  // Just focus the input
+window.onload = () => {
   const input = document.getElementById("passwordInput");
   if (input) input.focus();
 
