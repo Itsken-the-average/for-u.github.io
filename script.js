@@ -135,10 +135,15 @@ function checkPassword(event) {
     createStars();
     startFireworks();
 
-    // 4. Play Music
+    // 4. Pick a random song and play it
+    const songs = ["love-song.mp3", "broken.mp3", "funny-song.mp3"];
+    const randomSong = songs[Math.floor(Math.random() * songs.length)];
+
     if (music) {
+      music.src = randomSong;
       music.play().catch((e) => console.log("Audio play failed:", e));
     }
+    
   } else {
     // Show error
     errorMsg.style.display = "block";
