@@ -136,7 +136,7 @@ function checkPassword(event) {
     startFireworks();
 
     // 4. Pick a random song and play it
-    const songs = ["love-song.mp3", "broken.mp3", "funny-song.mp3"];
+    const songs = ["co2.mp3", "beautifulgirl.mp3", "ocean.mp3"];
     const randomSong = songs[Math.floor(Math.random() * songs.length)];
 
     if (music) {
